@@ -221,7 +221,8 @@ export default class ActionButton extends Component {
               {this.props.renderCusButton
                 ? this.props.renderCusButton({
                     buttonStyle: buttonStyle,
-                    animatedViewStyle: animatedViewStyle
+                    animatedViewStyle: animatedViewStyle,
+                    renderIcon: this._renderButtonIcon()
                   })
                 : this._renderButtonIcon()}
             </Animated.View>
