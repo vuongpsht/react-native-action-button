@@ -10,6 +10,7 @@ export interface ActionButtonProperties extends ViewProperties {
   resetToken?: any,
   active?: boolean,
 
+  renderCusButton?: React.FC
   position?: string,
   elevation?: number,
   zIndex?: number,
@@ -28,7 +29,7 @@ export interface ActionButtonProperties extends ViewProperties {
   size?: number,
   autoInactive?: boolean,
   onPress?: () => void,
-  renderIcon?: (active: boolean) => React.ReactElement<any>,
+  renderIcon?: (active: boolean) => React.ReactElement,
   backdrop?: boolean | object,
   degrees?: number,
   verticalOrientation?: 'up' | 'down',
