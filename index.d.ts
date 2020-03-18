@@ -55,6 +55,7 @@ export interface ActionButtonItemProperties extends ViewProperties {
   useNativeFeedback?: boolean;
   fixNativeFeedbackRadius?: boolean;
   nativeFeedbackRippleColor?: string;
+  shouldBorder?: boolean;
 }
 
 export class ActionButtonItem extends React.Component<
