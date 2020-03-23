@@ -347,7 +347,7 @@ export default class ActionButton extends Component {
     } else {
       this.anim.setValue(0);
     }
-    this.props.endCallback();
+    this.props.endCallback && this.props.endCallback();
 
     setTimeout(() => {
       if (this.mounted) {
