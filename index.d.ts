@@ -11,6 +11,9 @@ export interface ActionButtonProperties extends ViewProperties {
     renderIcon: () => React.ReactElement;
   }>;
 
+  shouldReShow?: boolean;
+  endCallback?: () => void;
+
   position?: string;
   elevation?: number;
   zIndex?: number;
@@ -65,4 +68,5 @@ export default class ActionButton extends React.Component<
   ActionButtonProperties
 > {
   static Item: typeof ActionButtonItem;
+  static showActions: () => void;
 }

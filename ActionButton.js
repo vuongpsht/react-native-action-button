@@ -326,6 +326,7 @@ export default class ActionButton extends Component {
   //////////////////////
 
   animateButton(animate = true) {
+    console.log("show");
     if (this.state.active) return this.reset();
 
     if (animate) {
@@ -338,6 +339,7 @@ export default class ActionButton extends Component {
   }
 
   reset(animate = true) {
+    console.log("hide");
     if (this.props.onReset) this.props.onReset();
 
     if (animate) {
@@ -345,10 +347,14 @@ export default class ActionButton extends Component {
     } else {
       this.anim.setValue(0);
     }
+    this.props.endCallback();
 
     setTimeout(() => {
       if (this.mounted) {
         this.setState({ active: false, resetToken: this.state.resetToken });
+        if (this.props.shouldReShow) {
+          this.animateButton();
+        }
       }
     }, 250);
   }
