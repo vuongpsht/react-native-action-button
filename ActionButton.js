@@ -326,7 +326,6 @@ export default class ActionButton extends Component {
   //////////////////////
 
   animateButton(animate = true) {
-    console.log("show");
     if (this.state.active) return this.reset();
 
     if (animate) {
@@ -339,7 +338,6 @@ export default class ActionButton extends Component {
   }
 
   reset(animate = true) {
-    console.log("hide");
     if (this.props.onReset) this.props.onReset();
 
     if (animate) {
